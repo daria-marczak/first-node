@@ -1,7 +1,7 @@
 var os = require("os");
-var formatTime = require("./formatTime");
+var getFormatTime = require("./formatTime");
 
-formatTime.print();
+getFormatTime.print();
 
 function getOSinfo() {
     var type = os.type();
