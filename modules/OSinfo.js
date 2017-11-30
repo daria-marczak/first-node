@@ -1,5 +1,6 @@
 var os = require("os");
-var getFormatTime = require("./formatTime");
+var timeFormatter = require("./TimeFormatter");
+timeFormatter.print();
 
 function getOSinfo() {
     var type = os.type();
@@ -17,7 +18,7 @@ function getOSinfo() {
     console.log("System:", type);
     console.log("System release:", release);
     console.log("CPU model is:", cpu);
-    getFormatTime.print();
+
     console.log("User's name is: " + userInfo.username + " and their catalog location is: " + userInfo.homedir);
 }
 
