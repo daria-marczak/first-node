@@ -14,7 +14,7 @@ process.stdin.on("readable", function() {
                 process.stdout.write("Node version is: " + process.versions.node + "\n");
                 break;
             default:
-                process.stdouterr.write("Wrong instruction!\n");
+                process.stderr.write("Wrong instruction!\n");
                 break;
         }
     }
