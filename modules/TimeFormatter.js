@@ -3,13 +3,13 @@ var os = require("os");
 function getFormatTime() {
     var uptime = os.uptime();
 
-    var time = Math.floor(uptime) / 60;
-    var upTimeMinutes = time.toFixed(0);
+    var hours = Math.floor(uptime / 3600);
+    uptime %= 3600;
 
-    var toHours = upTimeMinutes / 60;
-    var minutesToHours = toHours.toFixed(0);
+    var minutes = Math.floor(uptime / 60);
+    var seconds = (uptime % 60).toFixed(0);
 
-    console.log("System uptime is: " + upTimeMinutes + " min, what makes it " + minutesToHours + " hours");
+    console.log("System uptime is: " + hours + " h " + minutes + " min " + seconds + " sec.");
 }
 
 exports.print = getFormatTime;
