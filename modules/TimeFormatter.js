@@ -9,9 +9,9 @@ function getFormatTime(time) {
     var minutes = Math.floor(time / 60);
     var seconds = (time % 60).toFixed(0);
 
-    return hours + " hours " + minutes + " minutes " + seconds + " seconds.";
+    return (hours + " hours " + minutes + " minutes " + seconds + " seconds.");
 }
 
 
 
-exports.print = getFormatTime(time);
+exports.print = getFormatTime;
