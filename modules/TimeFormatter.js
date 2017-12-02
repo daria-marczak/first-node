@@ -14,4 +14,4 @@ function getFormatTime(time) {
 
 
 
-exports.print = getFormatTime;
+exports.print = getFormatTime(time);
