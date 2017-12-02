@@ -1,6 +1,6 @@
 var os = require("os");
 var timeFormatter = require("./TimeFormatter");
-
+var time = os.uptime();
 
 function getOSinfo() {
     var type = os.type();
@@ -18,7 +18,7 @@ function getOSinfo() {
     console.log("System:", type);
     console.log("System release:", release);
     console.log("CPU model is:", cpu);
-    timeFormatter.print();
+    console.log("System uptime is " + timeFormatter.print(time));
     console.log("User's name is: " + userInfo.username + " and their catalog location is: " + userInfo.homedir);
 }
 
