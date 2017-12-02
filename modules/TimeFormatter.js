@@ -1,15 +1,17 @@
 var os = require("os");
 
-function getFormatTime(uptime) {
-    var uptime = os.uptime();
 
-    var hours = Math.floor(uptime / 3600);
-    uptime %= 3600;
+function getFormatTime(time) {
 
-    var minutes = Math.floor(uptime / 60);
-    var seconds = (uptime % 60).toFixed(0);
+    var hours = Math.floor(time / 3600);
+    time %= 3600;
 
-    return(console.log("System uptime is: " + hours + " h " + minutes + " min " + seconds + " sec."));
+    var minutes = Math.floor(time / 60);
+    var seconds = (time % 60).toFixed(0);
+
+    return hours + " hours " + minutes + " minutes " + seconds + " seconds.";
 }
+
+
 
 exports.print = getFormatTime;
