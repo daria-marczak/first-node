@@ -1,9 +1,9 @@
 var os = require("os");
 var timeFormatter = require("./TimeFormatter");
-var time = os.uptime();
 
 function getOSinfo() {
     var type = os.type();
+    var time = os.uptime();
 
     if (type === "Darwin") {
         type = "OSX";
